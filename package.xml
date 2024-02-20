@@ -6,7 +6,9 @@
 
   <description>Industrial workstations supplier</description>
 
-  <maintainer email="fmrico@gmail.com">Francisco Martin Rico</maintainer>
+  <maintainer email="afifa.saeed@studenti.unitn.it">Afifa Saeed</maintainer>
+
+   <license>Apache License, Version 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
