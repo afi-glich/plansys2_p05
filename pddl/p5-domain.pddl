@@ -117,7 +117,7 @@
 
 (:durative-action move-carrier
     :parameters (?r - robot ?k - carrier ?l1 ?l2 - location)
-    :duration (= ?duration (distance ?l1 ?l2))
+    :duration (= ?duration (3))
     :condition (and 
         (at start (and 
             (at ?r ?l1)
