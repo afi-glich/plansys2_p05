@@ -1,0 +1,15 @@
+set instance robottino robot
+set instance box1 box
+set instance l1 location
+set instance l2 location
+set instance k1 carrier
+
+
+set predicate (at robottino l1)
+set predicate (at box1 l1)
+set predicate (connected l1 l2)
+set predicate (use-carrier robottino k1)
+
+set goal (and 
+    (at robottino l2)
+)
