@@ -31,7 +31,7 @@ def generate_launch_description():
     # Specify the actions
     delivery_cmd = Node(
         package='plansys2_p05',
-        executable='deliver_action_node',
+        executable='deliver_box_action_node',
         name='deliver_action_node',
         namespace=namespace,
         output='screen',
