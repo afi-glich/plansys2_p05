@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # Get the launch directory
-    example_dir = get_package_share_directory('plansys2_p5')
+    example_dir = get_package_share_directory('plansys2_p05')
     namespace = LaunchConfiguration('namespace')
 
     declare_namespace_cmd = DeclareLaunchArgument(
@@ -30,7 +30,7 @@ def generate_launch_description():
 
     # Specify the actions
     delivery_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='deliver_action_node',
         name='deliver_action_node',
         namespace=namespace,
@@ -38,7 +38,7 @@ def generate_launch_description():
         parameters=[])
     
     empty_box_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='empty_box_action_node',
         name='empty_box_action_node',
         namespace=namespace,
@@ -46,7 +46,7 @@ def generate_launch_description():
         parameters=[])
     
     fill_box_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='fill_box_action_node',
         name='fill_box_action_node',
         namespace=namespace,
@@ -54,7 +54,7 @@ def generate_launch_description():
         parameters=[])
     
     move_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='move_action_node',
         name='move_action_node',
         namespace=namespace,
@@ -62,7 +62,7 @@ def generate_launch_description():
         parameters=[])
     
     load_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='load_action_node',
         name='load_action_node',
         namespace=namespace,
@@ -70,7 +70,7 @@ def generate_launch_description():
         parameters=[])
     
     unload_cmd = Node(
-        package='plansys2_p5',
+        package='plansys2_p05',
         executable='unload_action_node',
         name='unload_action_node',
         namespace=namespace,
