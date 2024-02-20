@@ -53,7 +53,7 @@ if(BUILD_TESTING)
     find_package(ament_cmake_gtest REQUIRED)
 endif()
 
-ament_export_dependencies($d{dependencies})
+ament_export_dependencies(${dependencies})
 
 ament_package()
 
