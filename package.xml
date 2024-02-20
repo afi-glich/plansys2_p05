@@ -6,7 +6,7 @@
 
   <description>Industrial workstations supplier</description>
 
-  <maintainer email="afifa.saeed@live.it">Afifa Saeed</maintainer>
+  <maintainer email="fmrico@gmail.com">Francisco Martin Rico</maintainer>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
