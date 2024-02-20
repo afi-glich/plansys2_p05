@@ -16,19 +16,19 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /root
 
 RUN mkdir -p ~/plansys2_p005/src && \
-    cd ~/plansys2_p005/src && \
+    cd ~/plansys2_p0005/src && \
     git clone https://github.com/IntelligentRoboticsLabs/ros2_planning_system.git
 
-RUN cd ~/plansys2_p005 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
+RUN cd ~/plansys2_p0005 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 
-RUN cd ~/plansys2_p005/src && \
-    git pull
-    
-RUN cd ~/plansys2_p005 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
+RUN cd ~/plansys2_p0005/src && \
+    git clone https://github.com/afi-glich/plansys2_p05.git
+
+RUN cd ~/plansys2_p0005 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 
 RUN apt-get install -y vim gdb terminator
 
-RUN cd ~/plansys2_p005 && source /opt/ros/${ROS_DISTRO}/setup.bash && colcon build --symlink-install
+RUN cd ~/plansys2_p0005 && source /opt/ros/${ROS_DISTRO}/setup.bash && colcon build --symlink-install
 
 CMD /bin/bash
 
