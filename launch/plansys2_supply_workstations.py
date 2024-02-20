@@ -63,16 +63,16 @@ def generate_launch_description():
     
     load_cmd = Node(
         package='plansys2_p05',
-        executable='load_action_node',
-        name='load_action_node',
+        executable='load_box_action_node',
+        name='load_box_action_node',
         namespace=namespace,
         output='screen',
         parameters=[])
     
     unload_cmd = Node(
         package='plansys2_p05',
-        executable='unload_action_node',
-        name='unload_action_node',
+        executable='unload_box_action_node',
+        name='unload_box_action_node',
         namespace=namespace,
         output='screen',
         parameters=[])
