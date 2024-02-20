@@ -6,7 +6,7 @@
 
   <description>Industrial workstations supplier</description>
 
-  <maintainer email="afifa.saeed@studenti.unitn.it">Afifa Saeed</maintainer>
+  <maintainer email="afifa.saeed@live.it">Afifa Saeed</maintainer>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
