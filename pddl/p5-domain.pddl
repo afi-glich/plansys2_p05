@@ -45,7 +45,7 @@
             (at ?r ?l)
             (use-carrier ?r ?k)
             ;(< (carrier-load ?k) (capacity ?k))
-        )))
+        ))
     )
     :effect (and 
         (at start (and 
@@ -197,6 +197,5 @@
         ))
     )
 )
-
 
 )
