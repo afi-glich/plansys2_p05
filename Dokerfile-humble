@@ -22,7 +22,7 @@ RUN mkdir -p ~/plansys2_p05/src && \
 RUN cd ~/plansys2_p05 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 
 RUN cd ~/plansys2_p05/src && \
-    cp -r ~/plansys2_p05/src/ros2_planning_system/plansys2 ~/plansys2_p05/src/
+    git clone https://github.com/afi-glich/plansys2_p05.git
 
 RUN cd ~/plansys2_p05 && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro ${ROS_DISTRO}
 
