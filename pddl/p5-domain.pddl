@@ -1,9 +1,8 @@
 (define (domain p4-domain)
 
 (:requirements 
-    :strips 
     :typing
-    :numeric-fluents 
+    ;:numeric-fluents 
     :durative-actions
 )
 
@@ -29,9 +28,9 @@
 
 
 (:functions
-    (capacity ?k - carrier)  ; total capacity of carrier k
-    (carrier-load ?k - carrier)  ; number of boxes carrier k is holding
-    (distance ?l1 ?l2 - location)  ; distance between location l1 and location l2
+    ;(capacity ?k - carrier)  ; total capacity of carrier k
+    ;(carrier-load ?k - carrier)  ; number of boxes carrier k is holding
+    ;(distance ?l1 ?l2 - location)  ; distance between location l1 and location l2
 )
 
 (:durative-action load-box-on-carrier
@@ -45,8 +44,8 @@
         (over all (and 
             (at ?r ?l)
             (use-carrier ?r ?k)
-            (< (carrier-load ?k) (capacity ?k))
-        ))
+            ;(< (carrier-load ?k) (capacity ?k))
+        )))
     )
     :effect (and 
         (at start (and 
@@ -55,7 +54,7 @@
         ))
         (at end (and
             (on ?b ?k)
-            (increase (carrier-load ?k) 1) 
+            ;(increase (carrier-load ?k) 1) 
             (free ?r)
         ))
     )
@@ -164,7 +163,7 @@
         (at start (and
             (not (on ?b ?k))
             (not (free ?r))
-            (decrease (carrier-load ?k) 1) 
+            ;(decrease (carrier-load ?k) 1) 
         ))
         (at end (and
             (box-at-workstation ?b ?w) 
@@ -189,7 +188,7 @@
     :effect (and 
         (at start (and 
             (not (on ?b ?k))
-            (decrease (carrier-load ?k) 1) 
+            ;(decrease (carrier-load ?k) 1) 
             (not (free ?r))
         ))
         (at end (and
