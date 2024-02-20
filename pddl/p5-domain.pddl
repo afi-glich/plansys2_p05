@@ -1,4 +1,4 @@
-(define (domain p4-domain)
+(define (domain p5-domain)
 
 (:requirements 
     :typing
