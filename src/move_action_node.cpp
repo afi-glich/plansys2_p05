@@ -11,7 +11,7 @@ class MoveCarrier : public plansys2::ActionExecutorClient
 {
 public:
   MoveCarrier()
-  : plansys2::ActionExecutorClient("move_carrier", 1s)
+  : plansys2::ActionExecutorClient("move-carrier", 1s)
   {
     progress_ = 0.0;
   }
@@ -42,7 +42,7 @@ int main(int argc, char ** argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<MoveCarrier>();
 
-    node->set_parameter(rclcpp::Parameter("action_name", "move_carrier"));
+    node->set_parameter(rclcpp::Parameter("action_name", "move-carrier"));
     node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
     rclcpp::spin(node->get_node_base_interface());

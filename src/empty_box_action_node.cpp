@@ -11,7 +11,7 @@ class EmptyBoxAtWorkstation : public plansys2::ActionExecutorClient
 {
 public:
   EmptyBoxAtWorkstation()
-  : plansys2::ActionExecutorClient("empty_box_at_workstation", 2s)
+  : plansys2::ActionExecutorClient("empty-box-at-workstation", 2s)
   {
     progress_ = 0.0;
   }
@@ -42,7 +42,7 @@ int main(int argc, char ** argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<EmptyBoxAtWorkstation>();
 
-    node->set_parameter(rclcpp::Parameter("action_name", "empty_box_at_workstation"));
+    node->set_parameter(rclcpp::Parameter("action_name", "empty-box-at-workstation"));
     node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
     rclcpp::spin(node->get_node_base_interface());

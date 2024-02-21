@@ -12,7 +12,7 @@ class DeliverBox : public plansys2::ActionExecutorClient
 {
 public:
   DeliverBox()
-  : plansys2::ActionExecutorClient("deliver_box", 1s)
+  : plansys2::ActionExecutorClient("deliver-box", 2s)
   {
     progress_ = 0.0;
   }
@@ -43,7 +43,7 @@ int main(int argc, char ** argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<DeliverBox>();
 
-    node->set_parameter(rclcpp::Parameter("action_name", "deliver_box"));
+    node->set_parameter(rclcpp::Parameter("action_name", "deliver-box"));
     node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
     rclcpp::spin(node->get_node_base_interface());

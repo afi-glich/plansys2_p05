@@ -12,7 +12,7 @@ class FillBox : public plansys2::ActionExecutorClient
 {
 public:
   FillBox()
-  : plansys2::ActionExecutorClient("fillbox", 2s)
+  : plansys2::ActionExecutorClient("fill-box", 2s)
   {
     progress_ = 0.0;
   }
@@ -43,7 +43,7 @@ int main(int argc, char ** argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<FillBox>();
 
-    node->set_parameter(rclcpp::Parameter("action_name", "fillbox"));
+    node->set_parameter(rclcpp::Parameter("action_name", "fill-box"));
     node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
     rclcpp::spin(node->get_node_base_interface());

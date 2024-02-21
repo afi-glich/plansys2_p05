@@ -12,7 +12,7 @@ class UnloadBox : public plansys2::ActionExecutorClient
 {
 public:
   UnloadBox()
-  : plansys2::ActionExecutorClient("unload_box", 1s)
+  : plansys2::ActionExecutorClient("unload-box-from-carrier", 1s)
   {
     progress_ = 0.0;
   }
@@ -44,7 +44,7 @@ int main(int argc, char ** argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<UnloadBox>();
 
-    node->set_parameter(rclcpp::Parameter("action_name", "unload_box"));
+    node->set_parameter(rclcpp::Parameter("action_name", "unload-box-from-carrier"));
     node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
 
     rclcpp::spin(node->get_node_base_interface());
